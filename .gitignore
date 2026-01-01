@@ -38,3 +38,7 @@ codegen/
 # SimBiology backup files
 *.sbproj.backup
 *.sbproj.bak
+
+# MacOS
+.DS_Store
+
