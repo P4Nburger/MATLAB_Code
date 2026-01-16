@@ -9,7 +9,7 @@ clear; clc; close all;
 % 1. パラメータ設定
 % -------------------------------------------------------------------------
 % --- スイープ設定 ---
-freq_range   = 1:1:80;   % [Hz]
+freq_range   = 20:0.1:150;   % [Hz]
 tspan_sweep  = [0 2.0];   % [s]
 
 % --- 音波設定 ---
@@ -19,8 +19,8 @@ P0_drive     = 2;         % [Pa]
 tspan_main   = [0 5.0];   % [s]
 t_sound_on   = 1;       % [s]
 
-% --- 初期たわみ設定 (実験値準拠) ---0.02でスナップスルー,0.03でただの振動(12/4時点)
-x_push = 0.08e-3;          % [m] フレーム押し込み量
+% --- 初期たわみ設定 (実験値準拠) ---0.07でスナップスルー,0.08でただの振動(12/4時点)
+x_push = 0.07e-3;          % [m] フレーム押し込み量
 C_eff  = 0.2794;          % 有効形状定数
 
 % x_push = (1/2)*C_eff*delta_0^2  [mm系] を m系に直した実装
@@ -153,6 +153,7 @@ title('周波数応答 (剛性一定・自立モデル)');
 xlabel('周波数 [Hz]'); ylabel('Z方向 振幅 [mm]');
 grid on; legend('応答曲線', sprintf('共振点: %.1f Hz', f_res));
 
+
 % --- Figure 2: 時間応答 ---
 figure('Position', [700, 100, 800, 600], 'Color', 'w');
 
@@ -160,12 +161,14 @@ figure('Position', [700, 100, 800, 600], 'Color', 'w');
 subplot(2,1,1);
 plot(t, z*1000, 'b-');
 hold on; 
-xline(t_sound_on, 'r--', 'Label', 'Sound ON');
-yline(z_eq*1000, 'k:', 'Label', '初期位置');
+%xline(t_sound_on, 'r--', 'Label', 'Sound ON');
+%yline(z_eq*1000, 'k:', 'Label', '初期位置');
 hold off;
 ylabel('Z 変位 [mm]'); 
 title(sprintf('膜のたわみ (Z)(駆動: %.2f Hz)', f_res)); 
 grid on;
+xlim([0 5]);
+ylim([-1.2 1.2]);   
 
 % (2) Y方向 (フレーム)
 subplot(2,1,2);
@@ -173,12 +176,14 @@ subplot(2,1,2);
 y_extension = (params.y_eq - y) * 1000;
 plot(t, y_extension, 'r-', 'LineWidth', 1.5);
 hold on;
-xline(t_sound_on, 'r--');
-yline(0, 'g:', 'LineWidth', 1.5, 'Label', '初期位置');
+%xline(t_sound_on, 'r--');
+%yline(0, 'g:', 'LineWidth', 1.5, 'Label', '初期位置');
 hold off;
 ylabel('拡張量 [mm]'); 
 title('フレームの変位 (Y)'); 
 grid on;
+xlim([0 5]);
+ylim([-0.1 0.1]); 
 
 % =========================================================================
 % 2自由度 運動方程式 (自立維持・剛性一定・音波あり)
