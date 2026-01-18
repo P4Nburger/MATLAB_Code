@@ -15,7 +15,7 @@ function main()
     
     % FEAの結果から逆算した有効形状定数C
     %C_strip   = 0.2548; % 短冊モデル用
-    C_diamond = 0.2794; % ひし形モデル用
+    C_diamond = 0.2795; % ひし形モデル用
     
     % 選択されたモデルに応じてC_effを決定
     if strcmp(model_type, 'strip')
