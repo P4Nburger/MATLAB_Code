@@ -1,7 +1,7 @@
 clear; clc; close all;
 
 delete(gcp('nocreate'));
-pool = parpool('Threads', 20);
+pool = parpool('local', 8);
 
 fprintf('=======================================================\n');
 fprintf('   Extended Parameter Search: x_push up to 1.0 mm\n');
