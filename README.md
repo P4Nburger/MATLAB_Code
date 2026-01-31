@@ -10,7 +10,7 @@
 
 ## フォルダ構成
 
-### 📂 `syokitawami/`
+### 📂 `initial_deflection_condition/`
 **初期たわみ条件を求めるコード群**
 
 初期たわみ量とスナップスルー境界条件の関係を解析します。
@@ -25,7 +25,7 @@
 
 ---
 
-### 📂 `kakutyoukanoujouken/`
+### 📂 `expansion_criteria/`
 **拡張可能条件を判定するコード群**
 
 スナップスルー可能な初期たわみを探索します。
@@ -42,11 +42,11 @@
 | ファイル名 | 説明 |
 |-----------|------|
 | `scan.m` | gouseihenkou.mの最適化版（⭐️こっちをめちゃくちゃ推奨，早いし正確） |
-| `untitled_optimized.m` | スナップスルー可能な押し込み量の自動探索 |
-| `untitled.m` | 上記のプロトタイプ版，基本はoptimizedを推奨|
+| `run_simulation_optimized.m` | スナップスルー可能な押し込み量の自動探索 |
+| `run_simulation.m` | 上記のプロトタイプ版，基本はoptimizedを推奨|
 
 
-- `untitled_optimized.m`でスナップスルー境界の初期たわみを調べたあと，`scan.m`で確かめると言う使い方を推奨します．
+- `run_simulation_optimized.m`でスナップスルー境界の初期たわみを調べたあと，`scan.m`で確かめると言う使い方を推奨します．
 
 
 ---
@@ -55,20 +55,20 @@
 
 ### 1. 初期たわみ条件の計算
 ```matlab
-cd syokitawami/current/
+cd initial_deflection_condition/current/
 kotei_LikoruS_danmen  % 実行
 ```
 
 ### 2. 拡張可能条件の探索
 ```matlab
-cd kakutyoukanoujouken/current/
+cd expansion_criteria/current/
 scan  % 基本解析実行
 ```
 
 ### 3. 拡張可能な初期たわみ量の詳細な探索
 ```matlab
-cd kakutyoukanoujouken/current/機能追加版/
-untitled_optimized  % 推奨（高速）
+cd expansion_criteria/current/機能追加版/
+run_simulation_optimized  % 推奨（高速）
 
 ```
 
