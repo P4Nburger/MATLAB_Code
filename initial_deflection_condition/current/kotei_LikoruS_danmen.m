@@ -27,7 +27,7 @@ function main()
     end
     
     % --- グラフ描画用の押し込み量ベクトル ---
-    x_push_vec = 0.1:0.1:1;
+    x_push_vec = 0.1034;
 
     % --- 計算 ---
     % 補正されたシンプルな式で、たわみ量を直接計算
@@ -42,7 +42,7 @@ function main()
     fprintf('押し込み量[mm] | 予測たわみ量[mm]\n');
     fprintf('----------------|------------------\n');
     for i = 1:length(x_push_vec)
-        fprintf('     %.2f      |      %.4f\n', x_push_vec(i), delta_0_vec(i));
+        fprintf('     %.4f      |      %.4f\n', x_push_vec(i), delta_0_vec(i));
     end
     fprintf('=======================================================\n');
     

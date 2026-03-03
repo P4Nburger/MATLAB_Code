@@ -49,25 +49,9 @@
 
 ---
 
-## 使い方（推奨フロー）
-
-### 1. 初期たわみ条件の計算
-```matlab
-cd initial_deflection_condition/current/
-kotei_LikoruS_danmen  
-```
-
-### 2. 2. 拡張可能条件の探索（詳細解析）
-```matlab
-cd expansion_criteria/current/機能追加版/
-run_simulation_optimized  % 並列計算による高速探索
-```
-
-### 3. 拡張可能な初期たわみ量の詳細な探索
-```matlab
-cd expansion_criteria/current/
-scan  % 任意の初期たわみでの解析実行
-```
+### 📂 `energy/`
+**弾性エネルギーを求めるのに使ったコード群**
+csvを読み込み、弾性エネルギーを計算します。
 
 ---
 
