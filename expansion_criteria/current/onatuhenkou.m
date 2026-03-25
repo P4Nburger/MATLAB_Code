@@ -13,11 +13,11 @@ clear; clc; close all;
 % --- スイープ設定 ---
 freq_coarse = 1:1:100;      % [Hz] 粗いスキャン (1 Hz刻み)
 freq_fine_range = 3;        % [Hz] ピーク周辺のスキャン範囲
-freq_fine_step = 0.01;       % [Hz] 細かいスキャンの刻み幅
+freq_fine_step = 0.1;       % [Hz] 細かいスキャンの刻み幅
 tspan_sweep  = [0 2.0];    % [s]
 
 % --- 音波設定 ---
-P0_drive     = 2;         % [Pa]
+P0_drive     = 5;         % [Pa]
 
 % --- 本番シミュレーション設定 ---
 tspan_main   = [0 5.0];   % [s]

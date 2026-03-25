@@ -14,12 +14,12 @@ freq_coarse = 1:1:100;
 freq_fine_range = 3;
 freq_fine_step = 0.1;
 tspan_sweep  = [0 2.0];
-P0_drive = 2;
+P0_drive = 5;
 tspan_main = [0 5.0];
 t_sound_on = 1;
 
 % --- 構造パラメータ（ユーザー入力値を維持） ---
-params = struct('L',18e-3, 'w1',22.5e-3, 'w1_stiff',5.0e-3, 'w1_mass',11.25e-3, ...
+params = struct('L',18e-3, 'w1',22.5e-3, 'w1_stiff',5.0e-3, 'w1_mass',22.5e-3, ...
     't1',0.1e-3, 'E1',3.45e9, 'rho1',1250, 'S2',152.522e-6, 'rho2',1250, ...
     'k2_base',222.0, 'delta',0.05, 'P0',P0_drive, 'freq',0);
 
