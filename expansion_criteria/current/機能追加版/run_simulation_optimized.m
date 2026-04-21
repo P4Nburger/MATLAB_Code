@@ -14,7 +14,7 @@ freq_coarse = 1:1:100;
 freq_fine_range = 3;
 freq_fine_step = 0.1;
 tspan_sweep  = [0 2.0];
-P0_drive = 5;
+P0_drive = 2;
 tspan_main = [0 5.0];
 t_sound_on = 1;
 

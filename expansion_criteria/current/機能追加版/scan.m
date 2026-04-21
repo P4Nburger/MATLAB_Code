@@ -17,14 +17,14 @@ freq_fine_step = 0.01;       % [Hz] 細かいスキャンの刻み幅
 tspan_sweep  = [0 2.0];    % [s]
 
 % --- 音波設定 ---
-P0_drive     = 5;         % [Pa]
+P0_drive     = 2;         % [Pa]
 
 % --- 本番シミュレーション設定 ---
 tspan_main   = [0 5.0];   % [s]
 t_sound_on   = 1;       % [s]
 
 % --- 初期たわみ設定 (実験値準拠) ---
-x_push = 0.0735e-3;          % [m] フレーム押し込み量
+x_push = 0.073e-3;          % [m] フレーム押し込み量
 C_eff  = 0.2794;          % 有効形状定数
 
 z_target_initial_mm = sqrt(2 * (x_push * 1000) / C_eff);  % [mm]
