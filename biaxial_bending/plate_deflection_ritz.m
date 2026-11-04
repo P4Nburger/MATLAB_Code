@@ -1,9 +1,13 @@
-% =========================================================
-% Kirchhoff-Love plate bending by Ritz method
-% No separation of variables
-% x=0: clamped  -> w=0, dw/dx=0
-% Other edges: natural boundaries (free unless additional terms are imposed)
-% =========================================================
+%PLATE_DEFLECTION_RITZ  Ritz 法による板のたわみと曲げモーメントの分布
+%
+%   Kirchhoff-Love 板の曲げを Ritz 法で解く（変数分離はしない）。
+%   境界条件: x = 0 で固定（w = 0, dw/dx = 0）、ほかの辺は自然境界（自由）。
+%   基底関数は xi^px * eta^py（xi = x/lx, eta = 2*y/ly - 1）。
+%
+%   旧ファイル名: kinji.m（卒論提出後の追加検討）
+%
+%   See also PLATE_DEFLECTION_LEVY.
+
 clear; clc; close all;
 
 %% 1) Material / geometry / load

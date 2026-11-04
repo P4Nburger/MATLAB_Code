@@ -1,3 +1,10 @@
+%CURVATURE_FROM_3POINTS  3点を通る円から曲率半径と曲率を求める
+%
+%   入力した3点 (x1,y1), (x2,y2), (x3,y3) [mm] を通る円を求め、
+%   曲率半径 R [mm] と曲率 kappa = 1/R [1/mm] を表示してプロットする。
+%
+%   旧ファイル名: kyokuritukeisan.m（卒論提出後の追加検討）
+
 clear; clc; close all;
 
 % ===== 入力値（単位:mm）=====

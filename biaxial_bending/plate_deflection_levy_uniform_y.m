@@ -1,6 +1,12 @@
-% ==========================================
-% y方向の境界条件を外して、x方向たわみをy方向に一様展開
-% ==========================================
+%PLATE_DEFLECTION_LEVY_UNIFORM_Y  x 方向のたわみを y 方向に一様に広げた分布
+%
+%   PLATE_DEFLECTION_LEVY と同じ x 方向の解 W(x) を求め、
+%   y 方向の境界条件を外して y 方向に一様に広げたたわみ分布をプロットする。
+%
+%   旧ファイル名: nijikumageynasi.m（卒論提出後の追加検討）
+%
+%   See also PLATE_DEFLECTION_LEVY.
+
 clear; clc; close all;
 
 % 1. 材料・形状パラメータの定義
