@@ -42,3 +42,7 @@ codegen/
 # MacOS
 .DS_Store
 **/.DS_Store
+
+# MATLAB Project files (local only)
+*.prj
+/resources/
