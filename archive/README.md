@@ -4,6 +4,8 @@
 **論文の結果には使っていません。保守もしていないため、そのままでは動かないものがあります。**
 最新版は [`initial_deflection_condition/`](../initial_deflection_condition) と [`expansion_criteria/`](../expansion_criteria) にあります。
 
+ファイル名は当時のまま残しています。
+
 ## `initial_deflection_condition/`
 
 | フォルダ | 内容 |
@@ -20,4 +22,5 @@
 | `approachA/` | 別アプローチの試行 |
 | `2dof/` | 2 自由度モデルの初期実装 |
 | `v2/` 〜 `v7/` | 2 自由度モデルの改良の過程（初期たわみの与え方、剛性一定化、周波数スイープの導入、釣り合い点の改良、パラメータ変更） |
-| `v8/` | `run_simulation_optimized.m` のプロトタイプ（二分探索なしの逐次探索版） |
+| `v8/` | `run_boundary_search.m` のプロトタイプ（二分探索なしの逐次探索版） |
+| `after_thesis/` | 卒論提出後の音圧 5 Pa の検討（`run_response_fast.m` のパラメータ違い） |

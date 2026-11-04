@@ -1,6 +1,12 @@
-% ==========================================
-% たわみ分布だけをプロットする版
-% ==========================================
+%PLATE_DEFLECTION_LEVY  板の静的たわみ分布（Lévy 型の解の第1項）
+%
+%   x = 0 を固定端、x = lx を自由端とした板に等分布荷重 q をかけたときのたわみを、
+%   y 方向に sin(n*pi*y/ly) で展開した解の第1項（n = 1）で求めてプロットする。
+%
+%   旧ファイル名: nijikumage.m（卒論提出後の追加検討）
+%
+%   See also PLATE_DEFLECTION_LEVY_UNIFORM_Y, PLATE_DEFLECTION_RITZ.
+
 clear; clc; close all;
 
 % 1. 材料・形状パラメータの定義
