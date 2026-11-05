@@ -179,33 +179,6 @@ results = runtests('tests')
 
 ---
 
-## 旧ファイル名との対応
-
-論文を書いた時点のファイル名と、現在のファイル名の対応です。
-**名前の整理（2026/11）で計算内容は変えていません。** 旧コードと新コードで同じ計算（計算時間を短くした条件、GNU Octave で実行）を行い、周波数スイープの結果・時間応答・境界探索の手順がビット単位で一致することを確認しています。
-
-| 旧ファイル名 | 現在のファイル |
-|---|---|
-| `initial_deflection_condition/current/kotei_LikoruS_danmen.m` | `initial_deflection_condition/run_initial_deflection.m` |
-| `initial_deflection_condition/current/kotei_LikoruS_danmen2.m` | `initial_deflection_condition/run_initial_deflection.m`（`C_eff = 0.2781`、`x_push = 0.01:0.01:0.1` に設定） |
-| `expansion_criteria/current/gouseihenkou.m` | `expansion_criteria/run_response_basic.m` |
-| `expansion_criteria/current/機能追加版/scan.m` | `expansion_criteria/run_response_fast.m` |
-| `expansion_criteria/current/機能追加版/run_simulation_optimized.m` | `expansion_criteria/run_boundary_search.m` |
-| `expansion_criteria/current/機能追加版/equations_2DOF_SelfSustain.m` | `expansion_criteria/eom_2dof.m` |
-| `expansion_criteria/current/機能追加版/run_simulation.m` | `archive/expansion_criteria/v8/run_simulation.m` |
-| `expansion_criteria/current/onatuhenkou.m` | `archive/expansion_criteria/after_thesis/onatuhenkou.m`（`run_response_fast.m` で `P0 = 5`、`x_push = 0.0735e-3`、`refine_step = 0.1` にすると同じ計算） |
-| `2軸曲げ/nijikumage.m` | `biaxial_bending/plate_deflection_levy.m` |
-| `2軸曲げ/nijikumageynasi.m` | `biaxial_bending/plate_deflection_levy_uniform_y.m` |
-| `2軸曲げ/seiteki.m` | `biaxial_bending/derive_deflection_coefficients.m` |
-| `2軸曲げ/kinji.m` | `biaxial_bending/plate_deflection_ritz.m` |
-| `2軸曲げ/kyokuritukeisan.m` | `biaxial_bending/curvature_from_3points.m` |
-| `2軸曲げ/current/kyokuritu4ten.m` | `biaxial_bending/root_curvature_cubic_fit.m` |
-| `エネルギー/` | `energy/` |
-
-パラメータの変数名も一部変えています：`delta`（減衰比）→ `zeta`、`k2_base` → `k2`。
-
----
-
 ## 動作環境
 
 - **MATLAB** R2025b（筆者の環境）。R2019b 以降なら動く想定です（スクリプト内のローカル関数、`yline`、`tiledlayout` を使っているため）
